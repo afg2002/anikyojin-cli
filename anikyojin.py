@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup as bs
 
 def search(keyword):
     kw = keyword.replace(" ", "+")
-    link = "https://anikyojin.net/?s="+kw+"&post_type=post"
+    link = "https://anikyojin.id/?s="+kw+"&post_type=post"
     main_page = requests.get(link)
     soup = bs(main_page.content, 'lxml')
     card = soup.findAll('article', class_="artikel")
